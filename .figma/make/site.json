@@ -1,0 +1,10 @@
+{
+  "description": "Manage trucking operations, customers, equipment, and business workflows in a modern, mobile-friendly CRM built for trucking professionals.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
