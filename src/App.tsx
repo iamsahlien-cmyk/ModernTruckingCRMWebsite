@@ -430,8 +430,249 @@ const navItems: { id: string label: string icon: IconName }[] = [
   { id: "reports", label: "Reports", icon: "chart" },
 ]
 
+function CrushCompetitionGraphic() {
+  return (
+    <div className="crush-graphic" aria-label="Animated industrial CRM crusher">
+      <svg viewBox="0 0 760 680" role="img">
+        <title>
+          Client Command HD crushing the competition while business growth rises
+        </title>
+        <defs>
+          <linearGradient id="steel" x1="0" x2="1">
+            <stop offset="0" stopColor="#23365c" />
+            <stop offset=".5" stopColor="#40547b" />
+            <stop offset="1" stopColor="#17294d" />
+          </linearGradient>
+          <linearGradient id="orangeSteel" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#ff8a5f" />
+            <stop offset="1" stopColor="#ef4f19" />
+          </linearGradient>
+          <pattern
+            id="grid"
+            width="38"
+            height="38"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M38 0H0V38"
+              fill="none"
+              stroke="#8392b2"
+              strokeOpacity=".1"
+            />
+          </pattern>
+        </defs>
+
+        <rect width="760" height="680" fill="#091633" />
+        <rect width="760" height="680" fill="url(#grid)" />
+        <path
+          d="M0 560 185 470l150 52 200-160 225 90v228H0Z"
+          fill="#0d1e41"
+          opacity=".8"
+        />
+
+        <g className="growth-system">
+          <text x="536" y="95" className="graphic-kicker">
+            BUSINESS GROWTH
+          </text>
+          {[95, 145, 205, 278].map((height, index) => (
+            <rect
+              className={`growth-bar growth-bar-${index + 1}`}
+              key={height}
+              x={520 + index * 48}
+              y={485 - height}
+              width="29"
+              height={height}
+              rx="3"
+              fill={index === 3 ? "#ff6b35" : "#31476e"}
+            />
+          ))}
+          <path
+            className="growth-line"
+            d="M525 417 568 375 615 336 663 265"
+            fill="none"
+            stroke="#ff6b35"
+            strokeWidth="7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m650 270 18-14-1 23"
+            fill="none"
+            stroke="#ff6b35"
+            strokeWidth="7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+
+        <g className="crusher-frame">
+          <rect
+            x="72"
+            y="82"
+            width="36"
+            height="472"
+            rx="5"
+            fill="url(#steel)"
+          />
+          <rect
+            x="414"
+            y="82"
+            width="36"
+            height="472"
+            rx="5"
+            fill="url(#steel)"
+          />
+          <rect
+            x="55"
+            y="64"
+            width="412"
+            height="54"
+            rx="7"
+            fill="url(#steel)"
+          />
+          <path d="M55 95h412" stroke="#7180a0" strokeWidth="3" opacity=".45" />
+          <circle cx="86" cy="91" r="8" fill="#ff6b35" />
+          <circle cx="435" cy="91" r="8" fill="#ff6b35" />
+          <rect x="45" y="535" width="432" height="44" rx="6" fill="#1b2c51" />
+          <path
+            d="M75 535 45 579M447 535l30 44"
+            stroke="#627293"
+            strokeWidth="5"
+          />
+        </g>
+
+        <g className="crusher-press">
+          <rect x="235" y="103" width="50" height="135" fill="#31466e" />
+          <rect
+            x="202"
+            y="205"
+            width="116"
+            height="55"
+            rx="5"
+            fill="url(#orangeSteel)"
+          />
+          <rect x="130" y="248" width="260" height="45" rx="4" fill="#ff6b35" />
+          <path
+            d="M145 271h230"
+            stroke="#ffb397"
+            strokeWidth="3"
+            opacity=".7"
+          />
+          <text x="260" y="278" textAnchor="middle" className="press-label">
+            CLIENT COMMAND HD
+          </text>
+        </g>
+
+        <g className="competition-target">
+          <path
+            d="M190 400c0-48 30-84 70-84s70 36 70 84c0 27-12 43-30 54v45h-24v-28h-32v28h-24v-45c-18-11-30-27-30-54Z"
+            fill="#d7deeb"
+            stroke="#fff"
+            strokeWidth="5"
+          />
+          <circle cx="230" cy="395" r="13" fill="#091633" />
+          <circle cx="290" cy="395" r="13" fill="#091633" />
+          <path d="m252 424 8-11 8 11Z" fill="#091633" />
+          <path
+            d="M228 451h64"
+            stroke="#091633"
+            strokeWidth="7"
+            strokeDasharray="10 7"
+          />
+          <path
+            d="m252 326 13 31-17 26 18 31-11 39"
+            fill="none"
+            stroke="#ff6b35"
+            strokeWidth="6"
+          />
+          <text
+            x="260"
+            y="526"
+            textAnchor="middle"
+            className="competition-label"
+          >
+            THE COMPETITION
+          </text>
+        </g>
+
+        <g
+          className="crush-sparks"
+          stroke="#ff9b77"
+          strokeWidth="5"
+          strokeLinecap="round"
+        >
+          <path d="m132 436-35-12" />
+          <path d="m143 463-40 13" />
+          <path d="m379 435 35-14" />
+          <path d="m375 466 42 13" />
+        </g>
+
+        <g className="graphic-status">
+          <rect
+            x="72"
+            y="607"
+            width="378"
+            height="42"
+            rx="21"
+            fill="#12264b"
+            stroke="#2c4269"
+          />
+          <circle cx="96" cy="628" r="7" fill="#29cf96" />
+          <text x="115" y="633" className="status-label">
+            CRM LOADED • LEADS TARGETED • MARKET READY
+          </text>
+        </g>
+      </svg>
+      <div className="crusher-callout">
+        <span>COMPETITIVE PRESSURE</span>
+        <strong>MAXIMUM</strong>
+      </div>
+    </div>
+  )
+}
+
 function Landing({ enterApp }: { enterApp: () => void }) {
   const [menu, setMenu] = useState(false)
+  const [selectedLeads, setSelectedLeads] = useState<number[]>([1, 3])
+  const [leadsPurchased, setLeadsPurchased] = useState(false)
+  const demoLeads = [
+    {
+      id: 1,
+      company: "Titan Equipment Group",
+      industry: "Heavy Equipment",
+      location: "Nashville, TN",
+      signal: "Expanding fleet",
+      price: 18,
+      score: 98,
+    },
+    {
+      id: 2,
+      company: "Apex Fleet Service",
+      industry: "Fleet Maintenance",
+      location: "Louisville, KY",
+      signal: "Opened new location",
+      price: 14,
+      score: 94,
+    },
+    {
+      id: 3,
+      company: "Ironclad Site Works",
+      industry: "Construction",
+      location: "Columbus, OH",
+      signal: "Awarded new contracts",
+      price: 16,
+      score: 91,
+    },
+    {
+      id: 4,
+      company: "Redline Logistics",
+      industry: "Trucking",
+      location: "Indianapolis, IN",
+      signal: "Hiring 15 drivers",
+      price: 12,
+      score: 88,
+    },
+  ]
   return (
     <div className="landing">
       <header className="site-header">
@@ -439,6 +680,9 @@ function Landing({ enterApp }: { enterApp: () => void }) {
         <nav className={menu ? "landing-nav open" : "landing-nav"}>
           <a href="#platform" onClick={() => setMenu(false)}>
             Platform
+          </a>
+          <a href="#lead-store" onClick={() => setMenu(false)}>
+            Buy leads
           </a>
           <a href="#plans" onClick={() => setMenu(false)}>
             Lead plans
@@ -470,65 +714,43 @@ function Landing({ enterApp }: { enterApp: () => void }) {
           <div className="hero-grid">
             <div className="hero-copy">
               <div className="eyebrow">
-                <span></span> BUILT FOR THE PEOPLE WHO MOVE AMERICA
+                <span></span> THE HEAVY-DUTY BUSINESS GROWTH MACHINE
               </div>
               <h1>
-                Better leads.
+                Crush the competition.
                 <br />
-                <em>More heavy-duty wins.</em>
+                <em>Build the business.</em>
               </h1>
               <p>
-                The simple sales command center for heavy-duty businesses. Find
-                verified leads by industry, manage every relationship, and turn
-                the right opportunities into revenue.
+                Stop chasing weak lists. Start with a CRM preloaded for your
+                market, click the exact leads you want, and run every deal
+                through one relentless sales machine.
               </p>
               <div className="hero-actions">
-                <button className="button orange" onClick={enterApp}>
-                  Find leads now <Icon name="arrow" />
-                </button>
+                <a className="button orange" href="#lead-store">
+                  Start crushing your market <Icon name="arrow" />
+                </a>
                 <a className="text-link" href="#platform">
-                  Explore the platform <Icon name="chevron" size={16} />
+                  See the growth machine <Icon name="chevron" size={16} />
                 </a>
               </div>
               <div className="hero-proof">
                 <div>
                   <strong>8,215+</strong>
-                  <span>Verified business leads</span>
+                  <span>Targets ready to pursue</span>
                 </div>
                 <div>
                   <strong>360°</strong>
-                  <span>Account visibility</span>
+                  <span>Command of every deal</span>
                 </div>
                 <div>
                   <strong>&lt; 10 sec</strong>
-                  <span>To update a lead</span>
+                  <span>To make the next move</span>
                 </div>
               </div>
             </div>
             <div className="hero-visual">
-              <img
-                src="https://images.unsplash.com/photo-1592805144716-feeccccef5ac?crop=entropy&cs=tinysrgb&fit=crop&w=1400&q=88"
-                alt="Heavy duty truck traveling on the highway at sunset"
-              />
-              <div className="hero-overlay"></div>
-              <div className="floating-card activity-float">
-                <div className="float-icon">
-                  <Icon name="activity" />
-                </div>
-                <div>
-                  <span>PIPELINE MOMENTUM</span>
-                  <strong>+18.4%</strong>
-                </div>
-                <small>this month</small>
-              </div>
-              <div className="floating-card task-float">
-                <span className="live-dot"></span>
-                <div>
-                  <strong>3 follow-ups due</strong>
-                  <span>Your day is ready to roll</span>
-                </div>
-                <Icon name="chevron" />
-              </div>
+              <CrushCompetitionGraphic />
               <div className="road-lines"></div>
             </div>
           </div>
@@ -541,17 +763,17 @@ function Landing({ enterApp }: { enterApp: () => void }) {
           <div className="section-heading">
             <div>
               <div className="eyebrow dark">
-                <span></span> ONE PLATFORM. ZERO BLIND SPOTS.
+                <span></span> ONE PLATFORM. TOTAL MARKET CONTROL.
               </div>
               <h2>
-                Everything that matters,
+                Everything you need to
                 <br />
-                right where you need it.
+                outwork and outperform.
               </h2>
             </div>
             <p>
-              Built around how freight sales actually works. Every touchpoint,
-              next step, and opportunity stays visible and actionable.
+              Buy the right leads, attack the right opportunities, and keep
+              every next move visible. No weak spreadsheets. No wasted motion.
             </p>
           </div>
           <div className="feature-grid">
@@ -597,19 +819,153 @@ function Landing({ enterApp }: { enterApp: () => void }) {
           </div>
         </section>
 
+        <section className="lead-store-section" id="lead-store">
+          <div className="lead-store-copy">
+            <div className="eyebrow">
+              <span></span> YOUR CRM. PRELOADED FOR BATTLE.
+            </div>
+            <h2>
+              Click the leads.
+              <br />
+              <em>Own the opportunity.</em>
+            </h2>
+            <p>
+              Open Client Command HD and your market is already waiting. Review
+              the fit, buying signal, and location. Select only the leads worth
+              attacking. One click loads every purchased contact directly into
+              your sales pipeline.
+            </p>
+            <div className="store-steps">
+              {[
+                [
+                  "01",
+                  "Choose your industry",
+                  "Start with the market you know.",
+                ],
+                ["02", "Select exact leads", "Buy the targets that fit."],
+                ["03", "Run the playbook", "The CRM handles every next move."],
+              ].map(([number, title, detail]) => (
+                <div key={number}>
+                  <i>{number}</i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{detail}</small>
+                  </span>
+                </div>
+              ))}
+            </div>
+            <button className="button orange" onClick={enterApp}>
+              Enter the lead marketplace <Icon name="arrow" />
+            </button>
+          </div>
+
+          <div className="lead-store-demo">
+            <header>
+              <div>
+                <span>PRELOADED CRM</span>
+                <h3>Targets in your market</h3>
+              </div>
+              <div className="store-live">
+                <i></i>
+                LIVE INVENTORY
+              </div>
+            </header>
+            <div className="store-filter-row">
+              <button>
+                <Icon name="building" size={15} /> All industries
+              </button>
+              <button>
+                <Icon name="filter" size={15} /> Within 250 miles
+              </button>
+              <span>{demoLeads.length} top matches</span>
+            </div>
+            <div className="store-leads">
+              {demoLeads.map((lead) => {
+                const selected = selectedLeads.includes(lead.id)
+                return (
+                  <button
+                    className={selected ? "selected" : ""}
+                    key={lead.id}
+                    onClick={() => {
+                      setLeadsPurchased(false)
+                      setSelectedLeads(
+                        selected
+                          ? selectedLeads.filter((id) => id !== lead.id)
+                          : [...selectedLeads, lead.id],
+                      )
+                    }}
+                  >
+                    <span className="store-check">
+                      {selected && <Icon name="check" size={15} />}
+                    </span>
+                    <span className="store-score">
+                      <strong>{lead.score}</strong>
+                      <small>MATCH</small>
+                    </span>
+                    <span className="store-company">
+                      <small>{lead.industry}</small>
+                      <strong>{lead.company}</strong>
+                      <i>{lead.location}</i>
+                    </span>
+                    <span className="store-signal">
+                      <small>BUYING SIGNAL</small>
+                      <strong>
+                        <i></i>
+                        {lead.signal}
+                      </strong>
+                    </span>
+                    <b>${lead.price}</b>
+                  </button>
+                )
+              })}
+            </div>
+            <footer className={leadsPurchased ? "purchased" : ""}>
+              {leadsPurchased ? (
+                <div className="purchase-success">
+                  <span>
+                    <Icon name="check" size={20} />
+                  </span>
+                  <div>
+                    <strong>Targets loaded into your CRM</strong>
+                    <small>Your competitive attack plan is ready.</small>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div>
+                    <span>{selectedLeads.length} leads selected</span>
+                    <strong>
+                      $
+                      {demoLeads
+                        .filter((lead) => selectedLeads.includes(lead.id))
+                        .reduce((total, lead) => total + lead.price, 0)}
+                    </strong>
+                  </div>
+                  <button
+                    disabled={!selectedLeads.length}
+                    onClick={() => setLeadsPurchased(true)}
+                  >
+                    Purchase selected leads <Icon name="arrow" size={17} />
+                  </button>
+                </>
+              )}
+            </footer>
+          </div>
+        </section>
+
         <section className="plans-section" id="plans">
           <div className="plans-heading">
             <div className="eyebrow dark">
-              <span></span> SIMPLE LEAD SUBSCRIPTIONS
+              <span></span> FUEL FOR MARKET DOMINATION
             </div>
             <h2>
-              Pick your market.
+              Choose your arsenal.
               <br />
-              We deliver the opportunities.
+              Build your territory.
             </h2>
             <p>
-              Choose the industries and territories you serve. New verified
-              leads are added to your workspace every month—ready to contact.
+              Lock in the industries and territories you want to own. Fresh
+              verified leads keep your pipeline loaded every month.
             </p>
           </div>
           <div className="landing-plans">
@@ -668,16 +1024,16 @@ function Landing({ enterApp }: { enterApp: () => void }) {
         <section className="preview-section" id="workflow">
           <div className="preview-copy">
             <div className="eyebrow">
-              <span></span> YOUR DAY, ALREADY PRIORITIZED
+              <span></span> YOUR SALES ATTACK PLAN, ALREADY PRIORITIZED
             </div>
             <h2>
-              Open it. Know
+              Open it. Attack
               <br />
               what comes next.
             </h2>
             <p>
-              No hunting through spreadsheets or guessing who to call. Your
-              dashboard puts the most important work up front.
+              No hunting through weak spreadsheets or guessing who to call. Your
+              dashboard puts the highest-value moves up front.
             </p>
             <ul>
               <li>
@@ -804,16 +1160,18 @@ function Landing({ enterApp }: { enterApp: () => void }) {
         <section className="final-cta">
           <div className="cta-lines"></div>
           <div className="eyebrow">
-            <span></span> READY WHEN YOU ARE
+            <span></span> YOUR COMPETITION ISN’T WAITING
           </div>
           <h2>
-            Put your sales operation
+            Stop playing defense.
             <br />
-            in the fast lane.
+            Start taking the market.
           </h2>
-          <p>One simple system. Every prospect. Every next step.</p>
+          <p>
+            Preloaded CRM. Precision leads. One command center built to win.
+          </p>
           <button className="button orange" onClick={enterApp}>
-            Open the CRM <Icon name="arrow" />
+            Build the business <Icon name="arrow" />
           </button>
         </section>
       </main>
